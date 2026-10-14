@@ -1,82 +1,107 @@
-#📌 1. Project Title
-OOP Wrapper: Employee Management System using Python
+# 🧩 Project 5: OOP Wrapper – Employee Management System
 
-##📝 2. Project Description
-This project is a menu-driven Employee Management System developed using Python and Object-Oriented Programming (OOP) concepts.
+---
 
-It allows users to create and manage Person, Employee, and Manager objects. The project demonstrates inheritance, encapsulation, constructors, method overriding, getters, setters, and the use of the super() function.
+## 📖 Project Description
 
-Users can create different types of objects, store their details, display all records, and exit the system through a simple menu-driven interface.
+**OOP Wrapper** is a menu-driven, command-line Python application that demonstrates the core concepts of **Object-Oriented Programming (OOP)**. It models a simple organization hierarchy using three classes: `Person`, `Employee`, and `Manager`.
 
-##✨ 3. Features
+Users can create people, employees, and managers at runtime, store them in a single list, and display the details of every object through a common `display()` method.
 
-*👤 Create a Person: Store a person's name and age.
-*💼 Create an Employee: Store employee details, including employee ID and salary.
-*👨‍💼 Create a Manager: Store manager details, including department.
-*🔐 Encapsulation: Keep employee ID and salary as private attributes.
-*🔄 Getter and Setter Methods: Access and update private employee information.
-*🧬 Inheritance: Use the Person class as the parent of Employee and Employee as the parent of Manager.
-*♻️ Method Overriding: Customize the display() method in the Employee and Manager classes.
-*🛠️ Constructor Inheritance: Use super() to initialize parent class attributes.
-*📋 Display All Details: Show the details of all created objects.
-*🚪 Exit Option: Exit the application through the menu.
+---
 
-##🧰 4. Technologies Used
+## ✨ Features
 
-*🐍 Programming Language: Python 3
-*💻 Visual Studio Code (VS Code)
-*🌐 Git & GitHub
-*🧱 Concepts: Object-Oriented Programming (OOP)
-*🔒 Encapsulation: Private attributes and getter/setter methods
-*🧬 Inheritance: Parent and child classes
-*🔁 Polymorphism: Method overriding
-*🖥️ Interface: Command-Line Interface (CLI)
+- 👤 **Create a Person** with name and age
+- 💼 **Create an Employee** with name, age, employee ID, and salary
+- 🧑‍💼 **Create a Manager** with all employee details plus a department
+- 📋 **Show Details** of all created objects in one go
+- 🔒 **Encapsulation** – private attributes (`__employee_id`, `__salary`) accessed through getters and setters
+- 🧬 **Inheritance** – `Manager` → `Employee` → `Person`, verified with `issubclass()`
+- 🔁 **Polymorphism** – each class overrides `display()` with its own behavior
+- 🛡️ **Validation** – negative salaries are rejected in `set_salary()`
+- 🗑️ **Destructor** support for cleanup messages
+- 🔄 **Interactive menu loop** that runs until the user chooses to exit
 
+---
 
-##▶️ 5. How to Run the Project
+## 🛠️ Technologies Used
 
-Step 1: Install Python
-Install Python 3 on your computer if it is not already installed.
+| Technology | Purpose |
+|------------|---------|
+| 🐍 **Python 3** | Core programming language |
+| 🧱 **OOP Concepts** | Classes, inheritance, encapsulation, polymorphism |
+| 💻 **Command Line (CLI)** | User interaction via `input()` and `print()` |
+| 🆚 **Visual Studio Code** | Code editor used for development |
+| 🌿 **Git** | Version control |
+| 🐙 **GitHub** | Hosting the repository and sharing the project |
 
-Download it from: https://www.python.org/downloads/
+---
 
-Step 2: Save the Python File
-Save your code in a file named:
+## 🚀 How to Run
 
-main.py
+1. **Make sure Python 3 is installed**
+   ```bash
+   python --version
+   ```
 
-Step 3: Open the Terminal
-Open a terminal or command prompt and navigate to the folder containing your project.
+2. **Clone or download the project**
+   ```bash
+   git clone <your-repository-url>
+   cd <project-folder>
+   ```
 
-Step 4: Run the Program
-Execute the following command:
-
-python main.py
-If your system uses python3, run:
-
-python3 main.py
-Step 5: Select an Operation
-Choose an option from the displayed menu:
-
-Create a Person
-Create an Employee
-Create a Manager
-Show Details
-Exit
-Enter the corresponding number and follow the prompts.
-
-##📂 6. Project Structure
-'''
-├── main.py
-├── output.png
-└── README.md
-'''
+3. **Run the program**
+   ```bash
+   python main.py
+   ```
 
 
-##🖥️ 7. Output
+4. **Follow the on-screen menu**
+   ```
+   Choose an operation:
+   1. Create a Person
+   2. Create an Employee
+   3. Create a Manager
+   4. Show Details
+   5. Exit
+   ```
+
+---
+
+## 📂 Project Structure  
+
+```
+ ├── 📄 main.py 
+ ├── 📄 output.png    
+ └── 📄 README.md    
+```
+
+### 🏗️ Class Hierarchy
+
+```
+Person
+  └── Employee
+        └── Manager
+```
+
+| Class | Inherits From | Key Attributes |
+|-------|---------------|----------------|
+| `Person` | – | `name`, `age` |
+| `Employee` | `Person` | `__employee_id`, `__salary` (private) |
+| `Manager` | `Employee` | `department` |
+
+---
+
+## 🖥️ Output
 ![Program Output](output.png)
 
+---
 
-##👨‍💻 8. Author
+## 👩‍💻 Author
 
-**kajal**
+**Kajal**
+
+---
+
+
